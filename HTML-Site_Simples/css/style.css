@@ -1,0 +1,293 @@
+/*Codigo parte do menu*/
+* {
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/ptsans/v12/jizaRExUiTo99u79D0KEwA.ttf) format('truetype');
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  /*tipo de letra e cor*/
+  font-family: 'PT Sans', Arial, Verdana;
+  background-color: #eee;
+}
+h1 {
+  /*efeito das letras usadas*/
+  text-align: center;
+  font-size: 48px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #222;
+}
+/*menu do site*/
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100px;
+  margin: auto;
+  position: relative;
+  background-color: #2c3e50;
+  z-index: 7;
+}
+.menu li {
+  float: left;
+  width: 25%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}/*menu texto*/
+.menu a {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  font-size: 18px;
+  z-index: 9;
+}
+/*cor do menu quando está ativo*/
+a.active {
+  background-color: #00ced7;
+  pointer-events: none;
+}
+/*animação que faz as cores passarem de um lado para o outro*/
+li.slider {
+  width: 25%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  /* background-color: #8bd843; */
+  z-index: 8;
+  transition: left 0.4s, background-color 0.4s;
+} 
+/*menu com as respectivas mudanças de cor ao passar o rato*/
+.menu li:nth-child(1):hover ~ .slider,
+.menu li:nth-child(1):focus ~ .slider,
+.menu li:nth-child(1):active ~ .slider {
+  left: 0;
+  background-color: #3498db;
+}
+.menu li:nth-child(2):hover ~ .slider,
+.menu li:nth-child(2):focus ~ .slider,
+.menu li:nth-child(2):active ~ .slider {
+  left: 25%;
+  background-color: #9b59b6;
+}
+.menu li:nth-child(3):hover ~ .slider,
+.menu li:nth-child(3):focus ~ .slider,
+.menu li:nth-child(3):active ~ .slider {
+  left: 50%;
+  background-color: #e67e22;
+}
+.menu li:nth-child(4):hover ~ .slider,
+.menu li:nth-child(4):focus ~ .slider,
+.menu li:nth-child(4):active ~ .slider {
+  left: 75%;
+  background-color: #16a085;
+}
+
+/*grid com as imagens de produtos e respectivos preços*/
+  .gridcontainer{
+    display:flex;
+    flex-direction: column;
+   
+
+}
+.card{
+    display: flex;
+    border: 1px solid rgb(211, 211, 211);
+    margin: 5px;
+    padding: 5px;
+
+}
+/*titulo das imagens*/
+.cardTitle{
+    font-size: 14px;
+    margin: 0;
+    color: #2c3e50;
+}
+/*cor do texto sobre preço*/
+.cardPrice{
+    color: gray;
+}
+/*cor do botao comprar*/
+.cardBtn{
+    background-color: #00ced7;
+    border: none;
+    color: white;
+    width: 100px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+.info_wrapper{
+    flex: 60%;
+}
+.img_wrapper{
+    flex: 40%;
+    display: flex;
+    justify-content: flex-end;
+}
+.img_wrapper img{
+    width: 200px;
+}
+
+ 
+* {
+  box-sizing: border-box;
+}
+
+
+/* Crie duas colunas iguais que fiquem uma ao lado da outra */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+
+}
+
+/* Limpa os flutuadores após as colunas */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;  
+
+}
+
+/*gridview com imagens preço*/
+.grid-container {
+  display: grid;
+  grid-gap: 70px;
+  grid-template-columns: 300px 300px 300px;
+  background-color: #ffffff;
+  justify-content: center;/*colocar a grid centralizada*/
+  
+  padding: 10px;
+}
+/*grid a branco com texto centralizado tamanho e borda*/
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(252, 252, 252, 0.8);
+  padding: 0px;
+  font-size: 15px;
+  text-align: center;
+}
+
+/* Torna o Layout responsivo*/
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .nav-container,.container {
+    margin: 8% auto;
+  }
+  .nav-list li {
+    float: left;
+    width: 50%;
+  }
+  .nav-list li a:hover{
+    padding-right: 40%;
+    padding-top: 30px ;
+  }
+  .gridcontainer{
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;/*colocar a grid centralizada*/
+ 
+}
+.card{
+  flex: 0 35%;
+}
+} 
+
+/*galeria de imagens na pagina principal*/
+* {
+  box-sizing: border-box;
+ 
+}
+
+ body {
+  margin: 0;
+  font-family: Arial;
+}
+/*texto que está debaixo do carrossel*/
+.header {
+  text-align: center;
+  padding: 32px;
+  color:  #00ced7;
+} 
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 150px;  /*largura da caixa de imagens*/
+ 
+}
+
+/* Cria quatro colunas iguais que ficam lado a lado */
+.column {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px; /*tamanho das caixas*/
+ 
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+  
+}
+
+/* Layout Responsivo  - cria um layout de duas colunas em vez de quatro colunas */
+@media screen and (max-width: 800px) {
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Layout responsivo - faz com que as duas colunas empilhem uma em cima da outra em vez de uma ao lado da outra*/
+@media screen and (max-width: 600px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+
+/*rodapé parte inferior do site cor*/
+.footer {
+  position:absolute;
+  margin:8% auto;
+  height: 15%;
+  width:100%;
+  background-color: #2c3e50;
+  
+  color: #00ced7;
+  
+
+}
+/*texto do footer centralizado*/
+.inf1{
+ text-align: center;  
+
+}
+
+
+

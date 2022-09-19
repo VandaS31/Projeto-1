@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--formulario de pagamento-->
+<title>Fomulário</title>
+<meta charset="utf-8">
+</head>
+<body>
+<h3>Pagamento</h3>
+<form action="mailto:nomealuno@my.istec.pt" method="post"
+enctype="text/plain">
+<fieldset>
+<legend>Informação Pessoal:</legend>
+<label for="nome_id">Nome: </label>
+<input type="text" name="nome" id="nome_id" placeholder="Qual o
+ seu nome?" maxlength="10" required>
+<br>
+<br>
+<label for="email_id">E-mail: </label>
+<input type="email" name="email" id="email_id" placeholder="Qual o
+ seu email?">
+<br>
+<br>
+<label for="tel_id">Contato: </label>
+
+<input type="tel" name="tel" id="tel_id" placeholder="Qual o seu contato?"
+pattern="[0-9]{9}" maxlength="9" minlength="9" >
+<br>
+<br>
+<label for="morada_id">Morada: </label>
+<input type="text" name="morada" id="morada_id" placeholder="Qual a
+ sua morada?" maxlength="10" required>
+<br>
+</fieldset>
+<br>
+<br>
+<fieldset>
+    <legend>Produto:</legend>
+    <br>
+    <br>
+       
+       
+    <label for="nome_id">Nome: </label>
+    <input type="text" name="nome" id="nome_id" placeholder="" maxlength="10" required>
+     <br>
+     <br>
+       <label for="id_massa">Quantidade:</label><br>
+       <select id="massa" name="massa">
+       <option value="Normal">1</option>
+       <option value="Cotovelo">2</option>
+       <option value="Laço">3</option>
+       <option value="Espaguete">4</option>
+       </select><br><br><br>
+
+
+</fieldset>
+<fieldset>
+    <legend>Pagamento:</legend>
+    <label for="morada_id">Morada:</label>
+    <input type="text" name="morada" id="morada_id" placeholder="Morada da fatura?" maxlength="10" required>
+    <br>
+    <br>
+    <label for="codigo_id">Código Postal:</label>
+    <input type="text" name="codigo_p" id="codigo_id" placeholder="0000-000" maxlength="8" required>
+    <br>
+    <br>
+    <label for="nif_id">NIF:</label>
+    <input type="text" name="nif" id="nif_id" placeholder="NIF da fatura" pattern="[0-9]{9}" maxlength="9" minlength="9" required>
+    <br>
+    <br>
+    <label for="pagamento_id">Método de pagamento:</label>
+    <br>
+    <br>
+    
+        <label for="dinhero">Dinheiro</label>
+        <input type="radio" id="dinheiro" name="tipopagamento" value="dinheiro">
+        <label for="multibanco">Multibanco</label>
+        <input type="radio" id="multibanco" name="tipopagamento" value="multibanco">
+        <label for="Mbway">MBWay</label>
+        <input type="radio" id="Mbway" name="tipopagamento" value="Mbway">
+        
+      
+      
+</fieldset>
+<br>
+<br>
+<input type="reset" value="Limpar">
+<input type="submit" value="Confirmar">
+</form>
+</body>
+</html>
